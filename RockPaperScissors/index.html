@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Rock Paper Scissors
+    </title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="pageHeader">Test</h1>
+        <table class="table table-striped">
+            <thead>
+                <td>User</td>
+                <td>Computer</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="scoreOne"></td>
+                    <td id="scoreTwo"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="CreateNewGame()" >New Game</button>
+        <hr>
+        <div class="d-flex justify-content-around">
+            <a onclick="chose('rock')"><img src="./media/drax.jfif" alt="drax" width="150px" height="300px">
+            <p>Rock</p></a>
+            <a onclick="chose('paper')"><img src="./media/groot.jfif" alt="groot" width="150px" height="300px">
+            <p>Paper</p></a>
+            <a onclick="chose('scissors')"><img src="./media/gamora.jfif" alt="gamora" width="150px" height="300px">
+            <p>Scissors</p></a>
+        </div>
+        <h2 class="display-2">The computer chose:</h2>
+        <p id="computerChoice" class="display-3"></p>
+        <p id="outcome" class="display-3"></p>
+    </div>
+</body>
+<script src="./script/script.js"></script>
+</html>
