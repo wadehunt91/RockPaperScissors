@@ -1,17 +1,17 @@
-let scoreOne = 0;
-let scoreTwo = 0;
 
 const updateScores = () =>{ 
     document.getElementById("scoreOne").innerHTML = scoreOne;
     document.getElementById("scoreTwo").innerHTML = scoreTwo;
 }
-updateScores()
-
 const CreateNewGame = () => {
     scoreOne = 0;
     scoreTwo = 0;
     updateScores();
+    document.getElementById("computerChoice").innerHTML = "";
+    document.getElementById("outcome").innerHTML = "";
 }
+
+CreateNewGame();
 
 const randomGenerator = () => {
     const choices = ["rock", "paper", "scissors"]
@@ -41,7 +41,13 @@ const chose  = (choice) => {
         updateScores();
       }
       if(scoreOne == 5 || scoreTwo == 5){
-        alert("Game Over!");
+        if(scoreOne == 5 ){
+        alert("Game Over! You Win!");
         CreateNewGame();
       }
+        else if(scoreTwo == 5){
+        alert("Game Over! You Lose!")
+        CreateNewGame();
+      }
+}
 }
